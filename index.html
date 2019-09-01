@@ -17,17 +17,9 @@
 
 function goToUrl()  {
 
-              // window.open("https://rathcoolemedicalcentre.github.io/RathcooleMedicalCentre/"); 
+              window.open("https://rathcoolemedicalcentre.github.io/RathcooleMedicalCentre/"); 
   // return (false);
-	newWindow = window.open("", "_blank");
 
-request = $.ajax({ ... my request which returns a url to load ... })
-
-request.done((function(_this) {
-        return function(data, textStatus, jqXHR) {
-          return newWindow.location = data.Url;
-        };
-      })(this));
 }
 
 
