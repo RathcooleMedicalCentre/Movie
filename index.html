@@ -8,15 +8,17 @@
 <button onclick="resizeWin()">Resize window</button>
 
 <script>
-var myWindow;
-
-function openWin() {
-  myWindow = window.open("", "", "width=100, height=100");
+function goToUrl()  {
+              // window.open("https://rathcoolemedicalcentre.github.io/RathcooleMedicalCentre/"); 
+  // return (false);
+	newWindow = window.open("https://rathcoolemedicalcentre.github.io/RathcooleMedicalCentre/"", "_blank");
+request = $.ajax({ ... my request which returns a url to load ... })
+request.done((function(_this) {
+        return function(data, textStatus, jqXHR) {
+          return newWindow.location = data.Url;
+        };
+      })(this));
 }
-
-function resizeWin() {
-  myWindow.resizeTo(250, 250);
-  myWindow.focus();
 }
 </script>
 
