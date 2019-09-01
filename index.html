@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<p>Open a new window, and resize the width vand height to 500px:</p>
+<p>Press button to open Rathcoole Medical Centre App:</p>
 
 <button onclick="openWin()">Open Rathcoole Medical App</button>
 
@@ -10,7 +10,7 @@
 var myWindow;
 function openWin() {
   myWindow = window.open("", "", "width=100, height=100");
-	  myWindow.resizeTo(250, 250);
+	  myWindow.resizeTo(screen.availWidth, screen.availHeight/2);
   myWindow.focus();
 }
 
