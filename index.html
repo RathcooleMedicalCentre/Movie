@@ -1,42 +1,25 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html>
+<body>
 
-  <head>
-    <meta charset="utf-8">
+<p>Open a new window, and resize the width and height to 500px:</p>
 
-  
+<button onclick="openWin()">Create window</button>
+<button onclick="resizeWin()">Resize window</button>
 
-  <SCRIPT LANGUAGE="JavaScript">
+<script>
+var myWindow;
 
-
-
-
-
-
-
-
-function goToUrl()  {
-
-              window.open("https://rathcoolemedicalcentre.github.io/RathcooleMedicalCentre/"); 
-  // return (false);
-
+function openWin() {
+  myWindow = window.open("", "", "width=100, height=100");
 }
 
-
-</SCRIPT>
-
-
-	      
-
-
-	
-
-
-
-      
-
-  </head>
-  <body onLoad= "goToUrl()">
+function resizeWin() {
+  myWindow.resizeTo(250, 250);
+  myWindow.focus();
+}
+</script>
 
 </body>
 </html>
+
